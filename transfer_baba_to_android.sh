@@ -32,7 +32,7 @@ cat p.list | pax -wd > backup_new.tar
 java -jar abe.jar pack backup_new.tar backup_new.ab
 ### run the ADB commands on PS if you run this script on WSL and don't have ADB configured
 ### use -s option if some devices are attached
-adb restore .\backup_new.ab
+adb restore ./backup_new.ab
 ###
 popd
 rm -rf $TEMP_DIR
