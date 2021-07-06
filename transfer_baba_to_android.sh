@@ -1,6 +1,6 @@
 set -e
 
-#get adb from: https://developer.android.com/studio/releases/platform-tools and add it to PATH
+# for windows get adb from: https://developer.android.com/studio/releases/platform-tools and add it to PATH
 
 # on windows (WSL) change this to where %APPDATA% points
 PATH_TO_APP_DATA=$HOME/.local/share
