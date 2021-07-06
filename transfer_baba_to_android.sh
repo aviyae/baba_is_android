@@ -7,6 +7,7 @@ PATH_TO_APP_DATA=$HOME/.local/share
 
 sudo apt install default-jre
 sudo apt install pax
+sudo apt install android-tools-adb
 TEMP_DIR=$(mktemp -d)
 pushd $TEMP_DIR
 ### run the ADB commands on PS if you run this script on WSL and don't have ADB configured
