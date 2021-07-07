@@ -2,6 +2,20 @@ set -e
 
 # for windows get adb from: https://developer.android.com/studio/releases/platform-tools and add it to PATH
 
+echo "WARNING!"
+echo "This script **will replace the save files of your phone** (hopefully by those on your PC)."
+echo "You may want to backup the phone save files by running:"
+echo "\$adb backup -noapk org.hempuli.baba"
+echo "Maybe in the future we'll add an option to save a backup of your phone..."
+echo "Until then, use it on your own risk :)"
+echo ""
+echo "do you want to continue? (y/N)"
+read cont
+if [[ "$cont" != [yY] ]]; then
+	echo "exiting..."
+	exit 1
+fi
+
 # on windows (WSL) change this to where %APPDATA% points
 PATH_TO_APP_DATA=$HOME/.local/share
 
