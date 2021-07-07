@@ -60,13 +60,13 @@ cat p.list | pax -wd > backup_new.tar
 # and convert to ab file format
 java -jar abe.jar pack backup_new.tar backup_new.ab
 
-# restore data to phone
+# restore data to phone - THIS IS THE PART WHERE YOUR DATA IS OVERRIDDEN
 ### run the ADB commands on PS if you run this script on WSL and don't have ADB configured
 ### use -s option if some devices are attached
 # we don't use a password here - enter empty password in the phone if requested
 adb restore ./backup_new.ab
 ###
 
-# return system to previous state
+# clean and return the system to previous state
 popd
 rm -rf $TEMP_DIR
